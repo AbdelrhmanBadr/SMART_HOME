@@ -1,0 +1,26 @@
+/*
+ * USART_Config.h
+ *
+ * Created: 22-Oct-21 5:16:40 PM
+ *  Author: Abdelrhman Badr
+ */ 
+
+
+#ifndef USART_CONFIG_H_
+#define USART_CONFIG_H_
+
+#define USART_MULTI_PROCESSOR_COMMUNICATION_MODE	(USART_DISABLE)
+
+#define USART_BAUD_RATE								(9600UL)
+	
+#define USART_ENABLE_TX								(USART_ENABLE)
+#define USART_ENABLE_RX								(USART_ENABLE)
+
+#define USART_MODE									(USART_ASYNCH)
+#define USART_PARITY_MODE							(USART_NO_PARITY)
+
+#define USART_STOP_BIT								(USART_ONE_STOP_BIT)
+
+#define USART_CHAR_SIZE								(USART_EIGHT_CHAR_BIT)
+#define USART_CLOCK_PARITY							(USART_RISING_TX_FALLING_RX)
+#endif /* USART_CONFIG_H_ */

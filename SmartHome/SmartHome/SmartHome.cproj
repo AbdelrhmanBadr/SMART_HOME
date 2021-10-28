@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>{4c6d1227-a2a3-4c06-ac03-77689e9576e4}</ProjectGuid>
+    <avrdevice>ATmega32A</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>SmartHome</AssemblyName>
+    <Name>SmartHome</Name>
+    <RootNamespace>SmartHome</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress />
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue />
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>1</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+  <options />
+  <configurations />
+  <files />
+  <documentation help="" />
+  <offline-documentation help="" />
+  <dependencies>
+    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.19.0" />
+  </dependencies>
+</framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NDEBUG</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+</AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+  <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+</AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ADC.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ADC.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ADC_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ADC_Private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Atmega32A.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Blutooth_HC06.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Blutooth_HC06.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Buzzer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Buzzer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="CLCD.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="CLCD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="CLCD_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="CLCD_Private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DCMotor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DCMotor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DIO.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DIO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DIO_Private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Error.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="IR.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="IR.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LDR.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LDR.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LED.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LED.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Math.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Relay.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Relay.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Servo.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Servo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SevenSegment.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SevenSegment.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SevenSegment_Private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SmartHome.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SmartHome.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SmartHome_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SmartHome_Private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Std_DataType.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Stepper.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Stepper.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="TempSensorLm35.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="TempSensorLm35.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Timers.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Timers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Timers_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Timers_Private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="USART.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="USART.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="USART_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="USART_Private.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
